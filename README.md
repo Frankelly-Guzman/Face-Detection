@@ -1,7 +1,22 @@
 # Face-Detection
- This app allows the user to use their webcam to detect their face as well as any face that is near them.
- 
- This libraries used is openCV for the creation of the webcam object as well as the face detection.
- As well as pathlib to trace the file location for the haarscascade for the face trainer.
- 
- In order to exit the program upon launching press the 'q' key.
+
+## Description
+This app allows the user detect any face that is in the field of vision of the camera. To exit the program press the 'q' key.
+
+### Dependencies
+
+* Python ver. 3.9 or above
+* OpenCV
+
+### Installing
+
+* To install OpenCV using pip, enter pip install cv2 or pip3 install cv2 in the terminal or command line.
+```
+pip install opencv-python
+```
+
+## Help
+For those using MacOS change the webcam capture to 1 instead of 0.
+```
+webcam = cv2.VideoCapture(1)
+```
