@@ -1,22 +1,49 @@
-# Face-Detection
+# Face Detection with OpenCV
 
-## Description
-This app allows the user detect any face that is in the field of vision of the camera. To exit the program press the 'q' key.
+This is a simple Python script that uses OpenCV to perform real-time face detection through your computer's webcam. It captures video frames, detects faces in the frames, and draws rectangles around the detected faces.
 
-### Dependencies
+## Prerequisites
 
-* Python ver. 3.9 or above
-* OpenCV
+Before you run the script, you'll need to install the required Python library:
 
-### Installing
-
-* To install OpenCV using pip, enter pip install cv2 or pip3 install cv2 in the terminal or command line.
-```
+```bash
 pip install opencv-python
 ```
 
-## Help
-For those using MacOS change the webcam capture to 1 instead of 0.
+How to Use
+1. Clone the repository:
+```bash
+git clone https://github.com/Frankelly-Guzman/Face-Detection.git
+cd Face-Detection
 ```
-webcam = cv2.VideoCapture(1)
+
+2. Run the face detection script:
+```bash
+python face_detection.py
 ```
+
+This will open your computer's webcam and start detecting faces in real-time. To exit the program, press the 'q' key.
+
+Customization
+You can customize the face detection parameters by modifying the script. For example, you can adjust the scaleFactor, minNeighbors, and minSize values to fine-tune the face detection accuracy and performance.
+
+# Example of modifying face detection parameters
+```python
+faces = faceCascade.detectMultiScale(
+    gray,
+    scaleFactor=1.1,        # Adjust this value
+    minNeighbors=5,         # Adjust this value
+    minSize=(30, 30),       # Adjust this value
+    flags=cv2.CASCADE_SCALE_IMAGE
+)
+```
+
+## Credits
+This project uses the OpenCV library for face detection.
+
+Author
+This Face Detection project was created by Frankelly Guzman.
+
+If you have any questions or feedback, please feel free to [contact me](mailto:frankellyrguzman@gmail.com).
+
+Enjoy experimenting with Face Detection using OpenCV!
